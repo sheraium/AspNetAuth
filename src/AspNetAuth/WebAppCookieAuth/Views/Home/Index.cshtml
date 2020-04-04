@@ -29,3 +29,15 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Login", "Home"))
+        {
+            <input type="text" name="account" class="form-control" />
+            @Html.Password("password", null, new { @class = "form-control" })
+            <button>登入</button>
+        }
+    </div>
+    <p><a class="btn btn-default" href="@Url.Action("Backend")">後台 &raquo;</a></p>
+</div>
